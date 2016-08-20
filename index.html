@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<!-- Latest JQuery from Google CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+		<!-- Fonts from Google Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Open+Sans+Condensed:300|Cookie" rel="stylesheet">
+		
+		<!-- CSS for page -->
+		<link rel="stylesheet" href="style.css">
+
+		<!-- If one of the items for the navbar is clicked, it should scroll to the referenced section of the page. -->
+		<script>
+			$(document).on('click', 'a', function(event) {
+				if ($(this).attr('href')[0] == "#") {
+					event.preventDefault();
+					$('html, body').animate({
+						scrollTop: $( $.attr(this, 'href')).offset().top
+					}, 800); 
+				}
+			});
+		</script>
+	</head>
+
+	<body>
+		<!-- Header -->
+		<header>
+			<!-- Navigation Bar: Fixed Navbar (Useful for Mobile) -->
+			<nav class="navbar navbar-default navbar-fixed-top" style="font-size:15px;">
+			  <div class="container-fluid">
+			  	<!-- Navbar header/title -->
+			    <div class="navbar-header">
+			      <font style="font-family:Cookie;font-size:30px">cece tsui&nbsp;&nbsp;&nbsp;</font>
+			    </div>
+			    <!-- Navbar elements -->
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="#hello">hello</a></li>
+			      <li><a href="#about">about me</a></li>
+			      <li><a href="#projects">projects</a></li> 
+			      <li><a href="#why">why me</a></li>
+			      <li><a href="#resume">resume</a></li>  
+			      <li><a href="#contact">contact me</a></li> 
+			    </ul>
+			  </div>
+			</nav>
+		</header>
+
+		<!-- Welcome Section -->
+		<center>
+			<div id="hello">
+				<!-- Accounts for the content the navbar hides -->
+				<br><br><br>
+				<p style="font-family:Dancing Script;font-size:50px;font-weight:bold;margin-bottom:0px;padding-bottom:0px">hello, i'm
+				</p>
+				<p style="display:inline;font-size:150px;font-weight:bold">cece tsui</p>
+				<br>
+				<img src="./Images/cecetsui_circle.png" style="width:350px;">
+			</div>
+		</center>
+		<!-- To ensure the div is below the viewport when introduced to the page -->
+		<br><br><br><br><br><br>
+
+		<!-- Content Section -->
+		<div class="content">
+
+			<!-- About Me Section -->
+			<div id="about">
+				<!-- Accounts for the content the navbar hides -->
+				<br><br>
+				<p class="title"><b>about me.</b></p>
+				<hr size="5px" width="100%" color="#F6B497">
+				<p class="text">
+					<b>who am I</b><br>
+					I am a Junior at Wellesley College pursuing a Bachelor's Degree in Computer Science. Born and raised in Southern California, I was constantly exposed to sunny, beach-perfect days and a diverse set of food. It has truly influenced me to be the baseball-loving, Disneyland-loving foodie that is representative of Southern California.
+					<br><br>
+					<b>me and computer science</b><br>
+					Ever since I began taking Computer Science, I tried to further my knowledge of CS through internships, events, and summer jobs. Through my experience working for the MIT App Inventor as a Research Assistant and Developer, Girls Who Code at Disney Imagineering as a Teaching Assistant, Wellesley College Supplemental Instruction as a Supplemental Instructor, jrCode as a Curriculum Developer and Teacher, and Hackathons, I have been able to gain a solid foundation of CS.
+					<br><br>
+					<b>now what?</b><br>
+					Now, I am looking to expand outward and apply my skills and knowledge in industry. In addition to the work I am doing outside of the classroom, I am seeking other means of developing my skills as a software engineer in industry.
+				</p>
+				<hr size="5px" width="100%" color="#F6B497">
+			</div>
+
+			<!-- Projects Section -->
+			<div id="projects">
+				<!-- Accounts for the content the navbar hides -->
+				<br><br>
+				<p class="title"><b>projects.</b></p>
+				<hr size="5px" width="100%" color="#F6B497">
+				<p class="text">
+					
+				</p>
+				<hr size="5px" width="100%" color="#F6B497">
+			</div>
+
+			<!-- Why Me? Section -->
+			<div id="why">
+				<!-- Accounts for the content the navbar hides -->
+				<br><br>
+				<p class="title"><b>what makes me a great candidate.</b></p>
+				<hr size="5px" width="100%" color="#F6B497">
+				<p class="text">
+					
+				</p>
+				<hr size="5px" width="100%" color="#F6B497">
+			</div>
+
+			<!-- Resume Section -->
+			<div id="resume">
+				<!-- Accounts for the content the navbar hides -->
+				<br><br>
+				<p class="title"><b>resume.</b></p>
+				<hr size="5px" width="100%" color="#F6B497">
+				<p class="text">
+					
+				</p>
+				<hr size="5px" width="100%" color="#F6B497">
+			</div>
+
+			<!-- Contact Me Section -->
+			<div id="contact">
+				<!-- Accounts for the content the navbar hides -->
+				<br><br>
+				<p class="title"><b>contact me.</b></p>
+				<hr size="5px" width="100%" color="#F6B497">
+				<p class="text">
+					Feel free to contact me - I am happy to answer any questions! <br>
+					<center>
+					<div>
+						<div class="iconBar">
+							<a href="https://www.linkedin.com/in/cecetsui"><img class="icon" src="./Icons/linkedin.png"></a>
+						</div>
+						&emsp;&emsp;&emsp;&emsp;
+						<div class="iconBar">
+							<a href="https://www.github.com/cecetsui"><img class="icon" src="./Icons/github.png"></a>
+						</div>
+						&emsp;&emsp;&emsp;&emsp;
+						<div class="iconBar">
+							<a href="mailto:ctsui@wellesley.edu"><img class="icon" src="./Icons/mail.png"></a>
+						</div>
+					</div>
+					</center>
+				</p>
+				<hr size="5px" width="100%" color="#F6B497">
+			</div>
+		</div> <!-- End of the content section div --> 
+
+		<!-- Footer -->
+		<footer>
+			<center>
+				<div>
+					@2016 Cece Tsui | Thank you for visiting!
+				</div>
+			</center>
+		</footer>
+	</body>
+</html>

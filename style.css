@@ -1,0 +1,83 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body {
+	font-family:Amatic SC;
+	color: rgb(105,105,105);
+	background: url(./Images/pat.png) no-repeat top center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+footer{
+	background-color:white;
+	font-family: Open Sans Condensed;
+	font-weight:bold;
+	font-size: 15px;
+	padding:10px;
+}
+hr {
+	size:5px;
+	width:100%;
+	color:#F6B497;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color:#F6B497;
+	font-style:italic;
+}
+.content {
+	background-color:rgb(255,255,255);
+    background-color:rgba(255,255,255,.8);
+    margin-right:20px;
+    margin-left:20px;
+    padding:20px;
+}
+.nav {
+	display:inline;
+	font-family: Open Sans Condensed;
+	font-size: 20px;
+	font-weight:bold;
+}
+.title {
+	font-family:Dancing Script;
+	font-size: 40px;
+	color: rgb(105,105,105);
+}
+
+.text {
+	font-family:Open Sans Condensed;
+	font-size: 20px;
+	color: black;
+}
+.iconBar {
+	display: inline;
+}
+.icon {
+	width:80px;
+	height:80px;
+	vertical-align: middle;
+}
+.name {
+	font-family:Amatic SC;
+	font-size: 25px;
+	font-weight:bold;
+}
+.yearDescLoc {
+	font-family:Open Sans Condensed;
+	font-size: 20px;
+	font-style: italic;
+}
+.descrip {
+	font-family:Open Sans Condensed;
+	font-size: 20px;
+	text-align:left;
+	margin: 5px;
+}
