@@ -1,5 +1,9 @@
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest JQuery from Google CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -8,9 +12,6 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-		<!-- Latest JQuery from Google CDN -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 		<!-- Fonts from Google Fonts-->
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Open+Sans+Condensed:300|Cookie" rel="stylesheet">
@@ -39,9 +40,16 @@
 			  <div class="container-fluid">
 			  	<!-- Navbar header/title -->
 			    <div class="navbar-header">
-			      <font style="font-family:Cookie;font-size:30px">cece tsui&nbsp;&nbsp;&nbsp;</font>
+			    	 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationbar" aria-expanded="false">
+					 <span class="sr-only">Toggle navigation</span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 </button>
+			      <a class="navbar-brand" href="#"><font style="font-family:Cookie;font-size:30px">cece tsui&nbsp;&nbsp;&nbsp;</font></a>
 			    </div>
 			    <!-- Navbar elements -->
+			    <div class="collapse navbar-collapse" id="navigationbar">
 			    <ul class="nav navbar-nav">
 			      <li class="active"><a href="#hello">hello</a></li>
 			      <li><a href="#about">about me</a></li>
@@ -51,6 +59,7 @@
 			      <li><a href="#contact">contact me</a></li> 
 			    </ul>
 			  </div>
+			</div>
 			</nav>
 		</header>
 
@@ -98,7 +107,192 @@
 				<p class="title"><b>projects.</b></p>
 				<hr size="5px" width="100%" color="#F6B497">
 				<p class="text">
-					
+	<div style="font-family:Open Sans Condensed;font-size:25">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 project">
+					<img src="./Icons/website.png" class="projectIcon"><br>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#webModal">Websites</button>
+				</div>
+				<div class="col-sm-6 project">
+					<img src="./Icons/game.png" class="projectIcon"><br>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#gameModal">Games</button>
+				</div>
+			</div> <div class="row">
+				<div class="col-sm-6 project">
+					<img src="./Icons/arduino.png" class="projectIcon"><br>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#arduinoModal">Arduino</button>
+				</div>
+				<div class="col-sm-6 project">
+					<img src="./Icons/androidApps.png" class="projectIcon"><br>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#appModal">Android Apps</button>
+				</div>
+			</div> <div class="row">
+				<div class="col-sm-6 project">
+					<img src="./Icons/hackathons.png" class="projectIcon"><br>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#hackModal">Hackathons</button>
+				</div>
+				<div class="col-sm-6 project">
+					<img src="./Icons/mitAppInventor.jpeg" class="projectIcon"><br>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mitModal">Research: MIT App Inventor</button>
+				</div>
+			</div> <div class="row">
+				<div class="col-sm-6 project">
+					<img src="./Icons/terminal.png" class="projectIcon"><br>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#terminalModal">Malloc & Shell</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modals -->
+  	<div class="modal fade" id="webModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      		<!-- Header  -->
+	        </div>
+	        <div class="modal-body">
+	          <!-- Body -->
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+  	</div>
+
+  	<div class="modal fade" id="gameModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      		<!-- Header  -->
+	        </div>
+	        <div class="modal-body">
+	          <!-- Body -->
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+  	</div>
+
+  	<div class="modal fade" id="arduinoModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      		<!-- Header  -->
+	        </div>
+	        <div class="modal-body">
+	          <!-- Body -->
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+  	</div>
+
+  	<div class="modal fade" id="hackModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      		<!-- Header  -->
+	        </div>
+	        <div class="modal-body">
+	          <!-- Body -->
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+  	</div>
+
+  	<div class="modal fade" id="mitModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      		<!-- Header  -->
+	        </div>
+	        <div class="modal-body">
+	          <!-- Body -->
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+  	</div>
+
+  	<div class="modal fade" id="terminalModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      		<!-- Header  -->
+	        </div>
+	        <div class="modal-body">
+	          <!-- Body -->
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+  	</div>
+
+  	<div class="modal fade" id="appModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      		<!-- Header  -->
+	        </div>
+	        <div class="modal-body">
+	          <!-- Body -->
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+  	</div>
+
+					<!-- Websites
+							personal, CGVP, SOAC
+						Games/Programs
+							Snakes&Ladders, PacFish, City Scroller, Bouncing Ball, Obamicon
+						Arduino
+							Whisker Bot, Piezo Song
+						Android Apps
+							Doodling, Location Awareness
+						Hackathons
+							WeMentor
+						MIT App Inventor
+							Search Box
+						Malloc & Shell
+							Malloc, Shell  -->
 				</p>
 				<hr size="5px" width="100%" color="#F6B497">
 			</div>

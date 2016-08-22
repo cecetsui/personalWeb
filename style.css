@@ -33,6 +33,7 @@ a:hover {
 	color:#F6B497;
 	font-style:italic;
 }
+
 .content {
 	background-color:rgb(255,255,255);
     background-color:rgba(255,255,255,.8);
@@ -80,4 +81,12 @@ a:hover {
 	font-size: 20px;
 	text-align:left;
 	margin: 5px;
+}
+.project {
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+}
+.projectIcon{
+	height:180px;
 }
