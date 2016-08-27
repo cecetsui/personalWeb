@@ -27,7 +27,6 @@ hr {
 }
 a {
 	text-decoration: none;
-	color: inherit;
 }
 a:hover {
 	color:#F6B497;
@@ -59,7 +58,9 @@ a:hover {
 	color: black;
 }
 .iconBar {
-	display: inline;
+	float:none;
+	display:inline;
+
 }
 .icon {
 	width:80px;
@@ -89,4 +90,17 @@ a:hover {
 }
 .projectIcon{
 	height:180px;
+}
+.modPic {
+	width:230px;
+}
+.modal-content{
+	font-family:Open Sans Condensed;
+	font-size:18px;
+}
+.big{
+	font-size:40px;
+	font-weight: bold;
+	font-family:Amatic SC;
+	display:inline;
 }

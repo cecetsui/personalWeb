@@ -29,6 +29,12 @@
 					}, 800); 
 				}
 			});
+			$(document).on('click','.nav a', function(event) {
+				$(".nav").find(".active").removeClass("active");
+   				$(this).parent().addClass("active");
+			});
+			
+
 		</script>
 	</head>
 
@@ -46,17 +52,17 @@
 					 <span class="icon-bar"></span>
 					 <span class="icon-bar"></span>
 					 </button>
-			      <a class="navbar-brand" href="#"><font style="font-family:Cookie;font-size:30px">cece tsui&nbsp;&nbsp;&nbsp;</font></a>
+			      <a class="navbar-brand" href="#hello"><font style="font-family:Cookie;font-size:30px">cece tsui&nbsp;&nbsp;&nbsp;</font></a>
 			    </div>
 			    <!-- Navbar elements -->
 			    <div class="collapse navbar-collapse" id="navigationbar">
 			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="#hello">hello</a></li>
-			      <li><a href="#about">about me</a></li>
-			      <li><a href="#projects">projects</a></li> 
-			      <li><a href="#why">why me</a></li>
-			      <li><a href="#resume">resume</a></li>  
-			      <li><a href="#contact">contact me</a></li> 
+			      <li class="active"><a data-toggle="collapse" data-target=".navbar-collapse" href="#hello">hello</a></li>
+			      <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#about">about me</a></li>
+			      <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#projects">projects</a></li> 
+			      <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#why">why me</a></li>
+			      <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#resume">resume</a></li>  
+			      <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#contact">contact me</a></li> 
 			    </ul>
 			  </div>
 			</div>
@@ -91,7 +97,7 @@
 					<b>who am I</b><br>
 					I am a Junior at Wellesley College pursuing a Bachelor's Degree in Computer Science. Born and raised in Southern California, I was constantly exposed to sunny, beach-perfect days and a diverse set of food. It has truly influenced me to be the baseball-loving, Disneyland-loving foodie that is representative of Southern California.
 					<br><br>
-					<b>me and computer science</b><br>
+					<b>computer science and me</b><br>
 					Ever since I began taking Computer Science, I tried to further my knowledge of CS through internships, events, and summer jobs. Through my experience working for the MIT App Inventor as a Research Assistant and Developer, Girls Who Code at Disney Imagineering as a Teaching Assistant, Wellesley College Supplemental Instruction as a Supplemental Instructor, jrCode as a Curriculum Developer and Teacher, and Hackathons, I have been able to gain a solid foundation of CS.
 					<br><br>
 					<b>now what?</b><br>
@@ -116,7 +122,7 @@
 				</div>
 				<div class="col-sm-6 project">
 					<img src="./Icons/game.png" class="projectIcon"><br>
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#gameModal">Games</button>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#gameModal">Games & Programs</button>
 				</div>
 			</div> <div class="row">
 				<div class="col-sm-6 project">
@@ -129,7 +135,7 @@
 				</div>
 			</div> <div class="row">
 				<div class="col-sm-6 project">
-					<img src="./Icons/hackathons.png" class="projectIcon"><br>
+					<img src="./Images/wellsHack.png" class="projectIcon"><br>
 					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#hackModal">Hackathons</button>
 				</div>
 				<div class="col-sm-6 project">
@@ -146,17 +152,72 @@
 	</div>
 
 	<!-- Modals -->
+	<!-- Website Modal -->
   	<div class="modal fade" id="webModal" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog modal-lg">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	      		<!-- Header  -->
+	      		<b>Websites</b>
 	        </div>
 	        <div class="modal-body">
-	          <!-- Body -->
+	          <div class="container">
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<a href="https://cecetsui.github.io/CGVPCampaignWebsite"><img src="./Images/Website/cgvp.jpg" class="modPic"></a>
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b><a href="https://cecetsui.github.io/CGVPCampaignWebsite">College Government Vice President Campaign Website</a></b><br>
+						I built this website in order to be another resource within my campaign for Wellesley College Government Vice President during the Spring of 2016. This was one of the many first websites I've built. I used HTML, CSS, and JavaScript. Click on the title above to view.
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/Website/soac.jpg" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Student Organizations and Appointments Committee Website</b><br>
+						I revised this website in order to make the website more organized and in order to provide more resources for the students. The website itself is a Google Site within Wellesley, and thus cannot be accessed by anyone without a Wellesley email. For this website, I:<br>
+						<ul>
+							<li>Implemented a horizontal navigation bar instead of a vertical navigation bar</li>
+							<li>Embedded Google Gadgets that read from HTML files hosted through Google Drive in order to avoid the limitations of Google Sites (used only for pages that read from Google Spreadsheets or used APIS)</li>
+							<li>Changed the styling (font, sizing, color)</li>
+							<li>Organized the information displayed on the site, and made it easier to understand to the user</li>
+							<li>Created a Members Directory and Organizations Directory (Current Orgs List) which reads in the data of the members/organizations from a Google Spreadsheet (thus utilizing the Google Data API</li>
+							<li>Created an Events Calendar using the event system's (25Live) API</li>
+						</ul><br>
+						Outside of the APIs mentioned, I also utilized Google Fonts API and utilized the Bootstrap library. To build the pages, I used HTML, JavaScript, and CSS. You can see some of the pages below:<br>
+						<center>
+						<hr size="5px" width="100%">
+						<i>Members Page</i><br><br>
+						<img src="./Images/Website/members.jpg" style="width:400px"><br>
+						<hr size="5px" width="100%">
+						<i>Timeline Page</i><br><br>
+						<img src="./Images/Website/timeline.png" style="width:400px"><br>
+						<hr size="5px" width="100%">
+						<i>Organizations Directory (Current Orgs List)</i><br><br>
+						<img src="./Images/Website/orgsList.png" style="width:400px"><br>
+						<hr size="5px" width="100%">
+						<i>Event Calendar</i><br><br>
+						<img src="./Images/Website/eventCalendar.jpg" style="width:400px"><br>
+						<hr size="5px" width="100%">
+					</center>
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<a href="www.cecetsui.com"><img src="./Images/Website/personal.jpg" class="modPic"></a>
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b><a href="www.cecetsui.com">Personal Website</a></b><br>
+						This is the website you are currently viewing. This website is used to display my previous work, and what makes me a strong candidate for tech-related positions. I worked with HTML, CSS, JQuery, and JavaScript. I used the Bootstrap library and Google Font API as well.
+					</div>
+				</div>
+				<br><br>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -164,18 +225,74 @@
 	      </div>
 	    </div>
   	</div>
+  </div>
 
+  	<!-- Game Modal  -->
   	<div class="modal fade" id="gameModal" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog modal-lg">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	      		<!-- Header  -->
+	      		<b>Games & Programs</b>
 	        </div>
 	        <div class="modal-body">
-	          <!-- Body -->
+	          <div class="container">
+	          	<div class="row">
+				<br><br>
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/GamesPrograms/snakesAndLadders.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Snakes And Ladders</b><br>
+						As part of my Computer Programming and Problem Solving course, I had to create a game utilizing a GUI for my final project. Along with a partner, we developed a computerized vesion of  Snakes and Ladders utilizing python.
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/GamesPrograms/pacFish.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>PacFish</b><br>
+						As part of my Data Structures course, I had to work with a partner to develop a final project game. Utilizing GUIs and data structures such as Linked Lists and Stacks, we built a game based off of Pac-Man, but with fish. Though, in addition to Pac-Man, as the fish levels up, more computer "enemies" begin appearing, such as sharks. The fish must avoid these "enemies" and collect the coins. I utilized Java to build this game.
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/GamesPrograms/bouncingBalls.jpg" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Bouncing Balls</b><br>
+						Utilizing python, I explored the Pygame Library by building an interactive game which calls for three balls to bounce all throughout. If a user clicks on the canvas, a random ball will be relocated to the spot where the mouse clicked. The balls also flash different colors. All three balls are generated from a defined class, Ball.
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/GamesPrograms/cityScroller.jpg" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>City Scroller</b><br>
+						I explored the Pygame Library more by developing a city scene that continually passes, as if you are running or driving along a road and watching the city move past you. There are three different skylines of buildings. In order to do this, I developed the classes Building and Scroller. This used python.
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/GamesPrograms/obamaFlower.jpg" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Obamicon</b><br>
+						Utilizing python and looking to different libraries of python, I developed a program that takes an image (either command line or raw argument) and changes the pixel colors to resemble that of the coloring of the Obama Campaign. The original picture of the left is:<br>
+						<img src="./Images/GamesPrograms/originalFlower.jpg" style="width:300px"><br><br>
+						Here is the program in action on the terminal:<br>
+						<img src="./Images/GamesPrograms/obamacon.jpg" style="width:300px"><br><br>
+					</div>
+				</div>
+	          </div>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -184,17 +301,38 @@
 	    </div>
   	</div>
 
+  	<!-- Arduino Modal -->
   	<div class="modal fade" id="arduinoModal" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog modal-lg">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	      		<!-- Header  -->
+	      		<b>Arduino Programs</b>
 	        </div>
 	        <div class="modal-body">
-	          <!-- Body -->
+	        	Throughout the following projects, I constructed the Arduino and breadboarded myself. I used the Board of Education (BoE) Shield. In order to code the following projects, I utilized C++. Some projects not mentioned: Flashing LED lights, "Dancing" Arduino <br><br>
+	          <div class="container">
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/Arduino/piezo.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Piezo Song</b><br>
+						Playing around with Arduinos, I utilized C++ to build a program that tunes the "Happy Birthday" Song.
+					</div>
+				</div><br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/Arduino/whiskerBot.jpg" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Whisker Bot</b><br>
+						The Whisker Bot is an Arduino that uses it's "whiskers" (sensors) to see if it has hit a wall or an object in front of it. If it does, it then reverses itself and turns to the left or right dependent upon which whisker was touched. (i.e. If the bot's left whisker hits a wall, the bot will reverse and turn right.)
+					</div>
+				</div><br>
+	        </div>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -203,17 +341,28 @@
 	    </div>
   	</div>
 
+  	<!-- Hackathon Modal -->
   	<div class="modal fade" id="hackModal" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog modal-lg">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	      		<!-- Header  -->
+	      		<b>Hackathons</b>
 	        </div>
 	        <div class="modal-body">
-	          <!-- Body -->
+	          <div class="container">
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/wellsHack.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>WeMentor</b><br>
+						During my first Hackathon, my group decided to focus in on mentorship. Our goal was to develop a program that allowed for individuals to meet potential mentors/mentees within their area. It is similar to Tinder, but for creating and developing connections and finding quick ways of networking. My group consisted of four individuals, two (inclusive of myself) of whom had experience with code. Thus, we split into two groups -- one that focused in on front end and one that focused in on backend. I was in the group that focused in on backend. Thus, my partner and I focused on building the program utilizing the LinkedIn API as well as PHP. Although in the day or two we had we did not get far, my partner and I was able to learn more about backend work. You can learn more at <a href="https://github.com/jessicacherayil/wementor">https://github.com/jessicacherayil/wementor</a> (I accidentally deleted the repository on my account, but my commits are shown).
+					</div>
+				</div><br>
+	        </div>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -222,17 +371,29 @@
 	    </div>
   	</div>
 
+  	<!-- MIT App Inventor Modal  -->
   	<div class="modal fade" id="mitModal" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog modal-lg">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	      		<!-- Header  -->
+	      		<b>MIT App Inventor</b>
 	        </div>
 	        <div class="modal-body">
-	          <!-- Body -->
+	          <div class="container">
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/appInventor.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Research with MIT App Inventor</b><br>
+						The main goal of my research was to study the user interface and improve upon a factor that can better the user's experience with App Inventor. I focused primarily on the ability to search. Because App Inventor utilizes the Blockly language, where each block of code can take up a lot of space, users find it difficult in searching for a specific block, especially in very complex programs. My project, then, was to develop a search box that allows for search within the program utilizing a search query. Once searched, any block containing that query will remain in color while all others will be greyed out. In addition, the user may use arrow buttons and keys to navigate through these blocks, centering the block in their viewport. In addition, if a block that is searched for is within a parent block that is collapsed, the parent block will uncollapse to show the searched block. In order to accomplish this, I utilized Java and JavaScript. <br>
+						You can see how it works on <a href="block-search-cece.appspot.com">block-search-cece.appspot.com</a> and read more about it on <a href="http://www.tinkerblocks.org/appinventor/searching">my advisor's (Franklyn Turbak) website.</a>
+					</div>
+				</div><br>
+	        </div>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -241,17 +402,38 @@
 	    </div>
   	</div>
 
+  	<!-- Malloc & Shell Modal -->
   	<div class="modal fade" id="terminalModal" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog modal-lg">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	      		<!-- Header  -->
+	      		<b>Malloc & Shell</b>
 	        </div>
 	        <div class="modal-body">
-	          <!-- Body -->
+	          <div class="container">
+	          	<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/Terminal/shell.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Shell</b><br>
+						Within my CS240 course (Introduction to Machine Organization and Laboratory), one of the assigments was to implement or build our own shell using C. This task was inclusive of implementing foreground/background jobs, implementing built-in commands, and focusing in on job management. More information can be found on <a href="http://cs.wellesley.edu/~cs240/fall15/assignments/shell/shell.html">the assignment page</a>. Unfortunately, I could not display the code I wrote on my github (due to other students who may be taking this course).
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/Terminal/malloc.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Remembrallocator</b><br>
+						Within my CS240 course (Introduction to Machine Organization and Laboratory), one of the assigments was to implement a dynamic memory allocator for C programs (implementing our own "malloc" or "free"). More information can be found on <a href="http://cs.wellesley.edu/~cs240/fall15/assignments/malloc/malloc.html">the assignment page</a>. Unfortunately, I could not display the code I wrote on my github (due to other students who may be taking this course).
+					</div>
+				</div><br>
+	        </div>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -260,17 +442,39 @@
 	    </div>
   	</div>
 
+  	<!-- Android App Modal -->
   	<div class="modal fade" id="appModal" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog modal-lg">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	      		<!-- Header  -->
+	      		<b>Android Applications</b>
 	        </div>
 	        <div class="modal-body">
-	          <!-- Body -->
+	          <div class="container">
+	          	The below apps were a means of quickly learning about the different features of App Inventor and was part of my study to understand how to improve the interface. These were built during the first few days of my research during the summer of 2015.<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/AndroidApps/doodling.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Doodling</b><br>
+						This app allows users to "doodle" or draw on photos that they take and save these photos to their phone.
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-sm-3 indivProjects">
+						<img src="./Images/AndroidApps/location.png" class="modPic">
+					</div>
+					<div class="col-sm-6 indivProjects">
+						<b>Location Awareness</b><br>
+						This app utilizes the location sensor in order to track the distance the user has been walking and/or running in addition to the time the user took in walking/running the distance. As an avid runner, this was an app that I felt was very useful for running purposes (such as Map My Run).
+					</div>
+				</div><br>
+	        </div>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -278,21 +482,6 @@
 	      </div>
 	    </div>
   	</div>
-
-					<!-- Websites
-							personal, CGVP, SOAC
-						Games/Programs
-							Snakes&Ladders, PacFish, City Scroller, Bouncing Ball, Obamicon
-						Arduino
-							Whisker Bot, Piezo Song
-						Android Apps
-							Doodling, Location Awareness
-						Hackathons
-							WeMentor
-						MIT App Inventor
-							Search Box
-						Malloc & Shell
-							Malloc, Shell  -->
 				</p>
 				<hr size="5px" width="100%" color="#F6B497">
 			</div>
@@ -303,9 +492,11 @@
 				<br><br>
 				<p class="title"><b>what makes me a great candidate.</b></p>
 				<hr size="5px" width="100%" color="#F6B497">
-				<p class="text">
-					
+				<center>
+				<p class="text" style="padding-left:25%;padding-right:25%">
+					<div class="text" style="display:inline">I am </div><div class="big">bold, creative, and resourceful</div><div class="text" style="display:inline">.<br> I am </div><div class="big">reflective and adaptable</div><div class="text" style="display:inline">.<br> I am </div><div class="big">engaging, passionate, and well-spoken</div><div class="text" style="display:inline">.<br> Most Importantly, I am a </div><div class="big">leader</div><div class="text" style="display:inline"> in all that I do.</div>
 				</p>
+				</center>
 				<hr size="5px" width="100%" color="#F6B497">
 			</div>
 
@@ -316,7 +507,9 @@
 				<p class="title"><b>resume.</b></p>
 				<hr size="5px" width="100%" color="#F6B497">
 				<p class="text">
-					
+					<center>
+					<iframe src="./Resume/resume_aug26.pdf" style="width:60%;height:100%"></iframe>
+					</center>
 				</p>
 				<hr size="5px" width="100%" color="#F6B497">
 			</div>
@@ -330,16 +523,21 @@
 				<p class="text">
 					Feel free to contact me - I am happy to answer any questions! <br>
 					<center>
-					<div>
-						<div class="iconBar">
+					<div class="container">
+						<div class="row">
+						<div class="iconBar col-sm-2">
 							<a href="https://www.linkedin.com/in/cecetsui"><img class="icon" src="./Icons/linkedin.png"></a>
 						</div>
-						&emsp;&emsp;&emsp;&emsp;
-						<div class="iconBar">
+						<div class="iconBar col-xs-1">
+							&emsp;&emsp;
+						</div>
+						<div class="iconBar col-sm-2">
 							<a href="https://www.github.com/cecetsui"><img class="icon" src="./Icons/github.png"></a>
 						</div>
-						&emsp;&emsp;&emsp;&emsp;
-						<div class="iconBar">
+						<div class="iconBar col-xs-1">
+							&emsp;&emsp;
+						</div>
+						<div class="iconBar col-sm-2">
 							<a href="mailto:ctsui@wellesley.edu"><img class="icon" src="./Icons/mail.png"></a>
 						</div>
 					</div>
